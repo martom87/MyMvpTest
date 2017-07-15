@@ -53,10 +53,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
         viewSomeText.setText(s);
     }
 
-    @Override
-    public void insertNumber() {
-        editSomeText.getText();
-    }
+
 
     @Override
     public void showErrorMessage(int resId) {

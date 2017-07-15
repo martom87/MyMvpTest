@@ -8,7 +8,7 @@ public interface MainView {
 
     void showNumber(String s);
 
-    void insertNumber();
+
 
     void showErrorMessage(int resId);
 
