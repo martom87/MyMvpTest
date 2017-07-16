@@ -9,7 +9,7 @@ import javax.inject.Inject;
  */
 
 public class MainPresenter {
-
+//
     private MainView view;
 
     @Inject
@@ -26,7 +26,7 @@ public class MainPresenter {
     }
 
 
-    public void onClick(String s) {
+    public void setUpEditText(String s) {
         if (s.isEmpty()) {
             view.showErrorMessage(R.string.errorMessage);
 
@@ -34,6 +34,7 @@ public class MainPresenter {
             view.showNumber(s);
         }
     }
+
 
 
 }

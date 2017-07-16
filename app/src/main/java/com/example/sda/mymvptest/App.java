@@ -9,7 +9,7 @@ import com.example.sda.mymvptest.di.DaggerAppComponent;
 /**
  * Created by sda on 15.07.17.
  */
-
+// towrzy Daggera
 public class App extends Application {
     private AppComponent appComponent;
 

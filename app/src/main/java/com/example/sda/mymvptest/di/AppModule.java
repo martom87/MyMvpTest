@@ -10,7 +10,7 @@ import dagger.Provides;
  * Created by sda on 26.06.17.
  */
 
-
+//pozwala wstrzykiwac kintakst
 @dagger.Module
 public class AppModule {
 

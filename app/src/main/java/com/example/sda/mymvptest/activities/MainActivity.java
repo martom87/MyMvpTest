@@ -25,7 +25,9 @@ public class MainActivity extends AppCompatActivity implements MainView {
 
     @OnClick(R.id.button)
     public void onClick() {
-        mainPresenter.onClick(editSomeText.getText().toString());
+        // w modelu MVP w Activity powinno sie wykownac tylko rzeczy związane z widokiem- który realizuje aktywność
+        // a który z presentera przenosi intefejs View.
+        mainPresenter.setUpEditText(editSomeText.getText().toString());
     }
 
     @Inject
@@ -52,7 +54,6 @@ public class MainActivity extends AppCompatActivity implements MainView {
     public void showNumber(String s) {
         viewSomeText.setText(s);
     }
-
 
 
     @Override
