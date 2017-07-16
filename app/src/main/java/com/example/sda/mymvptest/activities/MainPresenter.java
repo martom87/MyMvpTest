@@ -9,7 +9,7 @@ import javax.inject.Inject;
  */
 
 public class MainPresenter {
-//
+    //
     private MainView view;
 
     @Inject
@@ -27,14 +27,12 @@ public class MainPresenter {
 
 
     public void setUpEditText(String s) {
-        if (s.isEmpty()) {
+        if (s.isEmpty() || (!s.matches("-?\\d+(\\.\\d+)?"))) {
             view.showErrorMessage(R.string.errorMessage);
-
         } else {
             view.showNumber(s);
         }
     }
-
 
 
 }
