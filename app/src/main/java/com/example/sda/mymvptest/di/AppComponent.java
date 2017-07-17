@@ -9,6 +9,8 @@ import javax.inject.Singleton;
  */
 
 @Singleton
+
+// podaje tablice komponentów
 @dagger.Component(modules = {AppModule.class})
 public interface AppComponent {
 
