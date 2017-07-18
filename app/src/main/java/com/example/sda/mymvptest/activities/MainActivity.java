@@ -27,7 +27,12 @@ public class MainActivity extends AppCompatActivity implements MainView {
     public void onClick() {
         // w modelu MVP w Activity powinno sie wykownac tylko rzeczy związane z widokiem- który realizuje aktywność
         // a który z presentera przenosi intefejs View.
+
         mainPresenter.setUpEditText(editSomeText.getText().toString());
+
+        // powyższe wyrażenie ^ jest tożsame z poniższym umożliwami wprowadzenie String s przez użytkownika
+        //  String s = editSomeText.getText().toString();
+        //  mainPresenter.setUpEditText(s);
     }
 
     @Inject
@@ -39,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
         ((App) getApplication()).getAppComponent().inject(this);
         mainPresenter.attachView(this);
 

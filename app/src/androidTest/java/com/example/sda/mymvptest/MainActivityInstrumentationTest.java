@@ -50,11 +50,9 @@ public class MainActivityInstrumentationTest {
     }
 
     @Test
-    public void buttonClicks(){
+    public void buttonClicks() {
         onView(withId(R.id.button)).perform(click());
     }
-
-
 
 
 }
