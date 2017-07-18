@@ -44,8 +44,18 @@ public class MainActivityInstrumentationTest {
     @Test
     public void correctInput_displayText() throws Exception {
         onView(withId(R.id.editText)).perform(click(), typeText(stringToBeTyped), closeSoftKeyboard());
-
+        onView(withId(R.id.button)).perform(click());
+        onView(withId(R.id.textView)).check(matches(withText(stringToBeTyped)));
 
     }
+
+    @Test
+    public void buttonClicks(){
+        onView(withId(R.id.button)).perform(click());
+    }
+
+
+
+
 }
 
